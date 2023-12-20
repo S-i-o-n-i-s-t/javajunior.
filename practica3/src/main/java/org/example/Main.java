@@ -51,19 +51,20 @@ public class Main {
         }
         System.out.println("Сериализация прошла успешно");
         // десериализация ПРОБЛЕМА!!!!!!!!!!!!!!!!!!!!!!!!!
-        List<Student> tasks1 = new ArrayList<>();
-        try {
-            tasks1 = objectMapper.readValue("studentJson.json", objectMapper.getTypeFactory().constructCollectionType(List.class, Student.class));
-        }catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+//        List<Student> tasks1 = new ArrayList<>();
+//        File file = new File("studentJson.json");
+//        try {
+//            tasks1 = objectMapper.readValue(file, objectMapper.getTypeFactory().constructCollectionType(List.class, Student.class));
+//        }catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
       ///  System.out.println(tasks1);
-        List<Student> tasks2 = new ArrayList<>();
-        try {
-            tasks2 = xmlMapper.readValue("studentXml.xml", xmlMapper.getTypeFactory().constructCollectionType(List.class, Student.class));
-        }catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+//        List<Student> tasks2 = new ArrayList<>();
+//        try {
+//            tasks2 = xmlMapper.readValue("studentXml.xml", xmlMapper.getTypeFactory().constructCollectionType(List.class, Student.class));
+//        }catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
        // System.out.println(tasks2);
     }
 }
