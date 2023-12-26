@@ -86,7 +86,6 @@ public class Main {
         }catch (Exception e){
             e.printStackTrace();
         }
-
         // Обновление объекта
         session = connector.getSession();
         try {
