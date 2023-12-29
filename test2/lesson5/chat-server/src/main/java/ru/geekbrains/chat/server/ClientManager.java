@@ -83,11 +83,17 @@ public class ClientManager implements Runnable {
                     if (str == '@' && client.name.equals(recipientName(stringBuilder, client.name))){
                         createBroadcastMessage(client, message);
                         test = false;
-                    } if (test == true) {
-                        createBroadcastMessage(client, message);
                     }
                 }
             }
+            if (test == true) {
+                for (ClientManager client: clients) {
+                    if (!client.name.equals(name)){
+                        createBroadcastMessage(client, message);
+                        }
+                    }
+            }
+
     }
     private void closeEverything(Socket socket, BufferedReader bufferedReader, BufferedWriter bufferedWriter) {
         // Удаление клиента из коллекции
